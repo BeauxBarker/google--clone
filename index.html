@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="navigation">
+        <nav class="nav--container">
+            <div class="nav--left">
+               <ul class="nav--element--left">
+                    <li class="nav--link"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+                    <li class="nav--link"><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US&pli=1">Store</a></li>
+               </ul>
+            </div>
+            <div class="nav--right">
+                <div class="nav--element--right">
+                    <li class="nav--link">Advanced</li>
+                    <li class="nav--link">Images</li>
+                    <img class="icon--dot--menu" src="images/icon_1.svg" alt="App Menu"/>
+                    <img class="icon--profile" src="images/googleimg.png" alt="Avatar"/>
+                </div>        
+            </div>
+        </nav>
+    </section class="body">
+
+    <form
+        method="GET"
+        action="https://www.google.com/search?q=%s&btnI=&sourceid=navclient&gfns=1"
+    >
+        <div class="main">
+            <div class="search--container">
+                <img class="logo" alt="google logo" src="images/logo.png"/>
+                <div class="input--container">
+                    <div class="modal--container" id="modal">
+                        <div class="modal--header">
+                            <div 
+                                class="modal--title">
+                                Search any image with Google Lens
+                            </div>
+                            <div 
+                                class="modal--exit" 
+                                onclick="hideshow()"
+                            >
+                                <img 
+                                    class="xicon" 
+                                    style="max-width: 20px;" 
+                                    src="images/closed.svg"
+                                />
+                            </div>
+                        </div>
+                        <div class="modal--wrapper">
+                            <div class="modal--body">
+                                <div class="modal--body--title">
+                                    <img class="upload--icon" alt="Upload Icon" src="images/imagedrop.svg"/>
+                                    <div 
+                                        class="upload--p">Drag an image here or
+                                        <input 
+                                            type="file"
+                                            id="upload"
+                                        />
+                                        <a href="" id="upload_link">upload a file</a>   
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="inner--modal"></div>
+                    </div>
+                    <div class="icon--wrapper">
+                        <div class="search--icon--wrapper">
+                            <img class="search--icon" src="images/search.svg" alt="search icon"/>
+                        </div>
+                        <input 
+                            class="search--input" 
+                            type="text"
+                            name="q"
+                        />
+                        <div class="icons--right">
+                            <div class="right--icon--wrapper">
+                                <img class="voice--icon" x-webkit-speech  src="images/voice.svg" alt="voice icon"/>
+                            </div>
+                            <div class="right--icon--wrapper">
+                                <img onclick="hideshow()" type="button" class="camera--icon" src="images/googlelens.png" alt="google camera icon"/>
+                            </div>
+                        </div>
+                    </div>                                   
+                </div>
+                    <div class="btn--container">
+                        <input 
+                            class="search--btn" 
+                            value="Google Search" 
+                            type="submit"
+                        />
+                        <div class="space--btwn--btn"></div>
+                
+                        <button 
+                            id="lucky" 
+                            value="I'm Feeling Lucky" 
+                            aria-label="I'm Feeling Lucky" 
+                            name="btnI"
+                            tabindex="0"
+                            type="submit"
+                            data-ved="0ahUKEwiwxuT4w838AhURAjQIHe0IB_8QnRsIFA"
+                        >
+                            <ul>
+                              <li>I'm Feeling Lucky</li>
+                              <li>I'm Feeling Doodley</li>
+                              <li>I'm Feeling Playful</li>
+                              <li>I'm Feeling Trendy</li>
+                              <li>I'm Feeling Artistic</li>
+                              <li>I'm Feeling Puzzled</li>
+                            </ul>  
+                        </button>
+                    
+                        
+                    </div>  
+            </div>
+        </div>
+    </form>
+    <footer class="footer--container">
+        
+        <div class="helpful--links--wrapper">
+            <div class="help--links--top">
+                <ul class="row media-row-start">
+                    <li class="nav--link">Advertising</li>
+                    <li class="nav--link">Buisness</li>
+                    <li class="nav--link">How Search Works</li>
+                </ul>
+            </div>
+            <div class="carbon">
+                <img class="leaf-icon" src="images/carbonleaf.png"/>
+                Carbon neutral since 2007
+            </div>
+            <div class="help--links--bottom">
+                <ul class="row f-end media-row-end">
+                    <li class="nav--link">Privacy</li>
+                    <li class="nav--link">Terms</li>
+                    <li class="nav--link">Settings</li>
+                </ul>
+            </div>
+        </div> 
+    <marquee>THIS IS A STUDENT PROJECT...FOR EDUCATIONAL PURPOSES ONLY</marquee>
+    </footer>
+<script src="showHide.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
